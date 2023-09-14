@@ -8,7 +8,6 @@
 </head>
 <body>
   @include('partials.header')
-  <i class="fa-solid fa-arrow-right"></i>
   <main>
     @yield('main-content')
   </main>

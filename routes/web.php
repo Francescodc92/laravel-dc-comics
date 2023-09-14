@@ -14,5 +14,11 @@ use App\Http\Controllers\admin\ComicController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+
+    return view('home');
+
+
+});
 
 Route::resource('comics', ComicController::class);
