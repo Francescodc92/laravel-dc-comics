@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap";
+
+body{
+  background-color: red;
+}
+
+
+
+.gatto {
+  width: 300px;
+  height: 300px;
+  background-image: url('../img/gatto.jpg');
+}
+
+
+//es di un immagine presa dalla compilazione di vite  
+//body {
+//   background-image: url('../img/node della foto');
+// }
+
+
