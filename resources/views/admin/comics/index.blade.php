@@ -5,6 +5,11 @@
 
 @section('main-content')
 <div class="container">
+    <div class="col-12 mb-4">
+        <a href="{{ route('comics.create') }}" class="btn btn-success w-100">
+            + Aggiungi
+        </a>
+    </div>
 
     <div class="row">
       <div class="col-12">
@@ -28,6 +33,9 @@
                           <td>
                               <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">
                                   Vedi
+                              </a>
+                              <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">
+                                  Modifica
                               </a>
                           </td>
                       </tr>
