@@ -41,6 +41,7 @@
                                 action="{{ route('comics.destroy', ['comic'=>  $comic->id]) }}"
                                 method="POST"
                                 class="d-inline-block mt-2"
+                                onsubmit="return confirm('Sei sicuro di voler cancellare questo elemento?');"
                               >
                                 @csrf
                                 @method('DELETE')
