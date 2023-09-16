@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 //controllers
 use App\Http\Controllers\admin\ComicController;
+use App\Http\Controllers\main\mainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,6 @@ use App\Http\Controllers\admin\ComicController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-
-    return view('home');
-
-
-});
+Route::get('/', [mainController::class, 'index']);
 
 Route::resource('comics', ComicController::class);
