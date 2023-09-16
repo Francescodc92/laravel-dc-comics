@@ -31,12 +31,24 @@
                           <td>{{ $comic->price }} €</td>
                           <td>{{ $comic->series }}</td>
                           <td>
-                              <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">
+                              <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary mt-2">
                                   Vedi
                               </a>
-                              <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">
+                              <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning mt-2">
                                   Modifica
                               </a>
+                              <form 
+                                action="{{ route('comics.destroy', ['comic'=>  $comic->id]) }}"
+                                method="POST"
+                                class="d-inline-block mt-2"
+                              >
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger mt-2">
+                                    Elimina
+                                </button>
+
+                              </form>
                           </td>
                       </tr>
                   @endforeach
