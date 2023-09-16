@@ -4,7 +4,7 @@
 
 ## oggi create un nuovo progetto Laravel 10 per gestire un archivio di fumetti.
 
-- DESCRIZIONE:
+- DESCRIZIONE es 14/09/2023:
   - Ciao ragazzi,oggi create un nuovo progetto Laravel 10 per gestire un archivio di fumetti.
 
 - MILESTONE 1 :
@@ -20,6 +20,11 @@
 - BONUS
   - creare il seeder per la tabella comics utilizzando il file in allegato.
 
+- DESCRIZIONE es 15/09/2023:
+  - oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.
+
+- BONUS
+  - tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
 
 ## Tecnologie
 
