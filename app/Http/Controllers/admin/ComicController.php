@@ -42,6 +42,22 @@ class ComicController extends Controller
             'type'=> 'required|max:100',
             'artists' => 'required',
             'writers' => 'required',
+        ], [
+            'title.required'=> 'il titolo è obbligatorio',
+            'title.max'=> 'il titolo non può essere più lungo di 64 caratteri spazi compresi',
+            'thumb.max'=> 'il link dell\'immagine  non può essere più lungo di 2048 caratteri spazi compresi',
+            'price.required'=> 'il prezzo è obbligatorio',
+            'price.decimal'=> 'il prezzo può avere un massimo di 2 cifre decimali',
+            'price.min'=> 'il prezzo non può essere minore di 0.01€',
+            'price.max'=> 'il prezzo non può essere maggiore di 100€',
+            'series.required'=> 'la serie è obbligatoria',
+            'series.max'=> 'la serie non può avere più di 100 caratteri spazi compresi',
+            'sale_date.required'=> 'la data di vendita è obbligatoria',
+            'sale_date.date'=> 'la data deve essere un valore valido (es 18/09/2023)',
+            'type.required'=> 'il tipo del comic è obbligatorio',
+            'type.max'=> 'il tipo del comic può contenere un massimo di 100 caratteri spazi inclusi',
+            'artists.required'=> 'gli artisti sono obbligatori',
+            'writers.required'=> 'gli scrittori sono obbligatori',
         ]);
 
 
@@ -80,6 +96,22 @@ class ComicController extends Controller
             'type'=> 'required|max:100',
             'artists' => 'required',
             'writers' => 'required',
+        ],[
+            'title.required'=> 'il titolo è obbligatorio',
+            'title.max'=> 'il titolo non può essere più lungo di 64 caratteri spazi compresi',
+            'thumb.max'=> 'il link dell\'immagine  non può essere più lungo di 2048 caratteri spazi compresi',
+            'price.required'=> 'il prezzo è obbligatorio',
+            'price.decimal'=> 'il prezzo può avere un massimo di 2 cifre decimali',
+            'price.min'=> 'il prezzo non può essere minore di 0.01€',
+            'price.max'=> 'il prezzo non può essere maggiore di 100€',
+            'series.required'=> 'la serie è obbligatoria',
+            'series.max'=> 'la serie non può avere più di 100 caratteri spazi compresi',
+            'sale_date.required'=> 'la data di vendita è obbligatoria',
+            'sale_date.date'=> 'la data deve essere un valore valido (es 18/09/2023)',
+            'type.required'=> 'il tipo del comic è obbligatorio',
+            'type.max'=> 'il tipo del comic può contenere un massimo di 100 caratteri spazi inclusi',
+            'artists.required'=> 'gli artisti sono obbligatori',
+            'writers.required'=> 'gli scrittori sono obbligatori',
         ]);
 
         $comic->update($formData);
