@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title', 64);
             $table->text('description')->nullable();
-            $table->string('thumb', 1024)->nullable();
-            $table->decimal('price',8,2);
+            $table->string('thumb', 2048)->nullable(); // usare 2048 
+            $table->unsignedDecimal('price',8,2);
             $table->string('series', 100);
             $table->date('sale_date');
             $table->string('type', 100);

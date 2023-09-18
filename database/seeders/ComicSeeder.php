@@ -25,8 +25,8 @@ class ComicSeeder extends Seeder
             $comic->series = $comicElement['series'];
             $comic->sale_date = $comicElement['sale_date'];
             $comic->type = $comicElement['type'];
-            $comic->artists = implode( ',',$comicElement['artists']);
-            $comic->writers = implode(',',$comicElement['writers']);
+            $comic->artists = implode( ',',$comicElement['artists']); // usare la pipe come separatpre (|)
+            $comic->writers = implode(',',$comicElement['writers']); // usare la pipe come separatpre (|)
             $comic->save();
         }
 }
