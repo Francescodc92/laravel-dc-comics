@@ -54,24 +54,6 @@
                     <p>
                         {{ $comic->description }}
                     </p>
-                    <div class="actions-container">
-                        <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning mt-2">
-                            Modifica
-                        </a>
-                        <form 
-                          action="{{ route('comics.destroy', ['comic'=>  $comic->id]) }}"
-                          method="POST"
-                          class="d-inline-block mt-2"
-                          onsubmit="return confirm('Sei sicuro di voler cancellare questo elemento?');"
-                        >
-                          @csrf
-                          @method('DELETE')
-                          <button type="submit" class="btn btn-danger mt-2">
-                              Elimina
-                          </button>
-
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>

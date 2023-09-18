@@ -15,9 +15,9 @@ class mainController extends Controller
         return view('home', compact('comics'));
     }
 
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        //
+        return view('main-show', compact('comic'));
     }
 
 }

@@ -15,6 +15,7 @@ use App\Http\Controllers\main\mainController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [mainController::class, 'index']);
+Route::get('/', [mainController::class, 'index'])->name('home');
+Route::get('/show/{comic}', [mainController::class, 'show'])->name('main-show');
 
 Route::resource('comics', ComicController::class);

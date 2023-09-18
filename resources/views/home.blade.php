@@ -14,7 +14,7 @@
             <h5 class="card-title">{{ $comic->title }}</h5>
             <p class="card-text">{{ Str::limit($comic->description, 200)}}</p>
             <p class="card-text text-primary fw-bold">Prezzo: {{ $comic->price }}€</p>
-            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">Dettagli</a>
+            <a href="{{ route('main-show', ['comic' => $comic->id]) }}" class="btn btn-primary">Dettagli</a>
           </div>
         </div>
       </div>
