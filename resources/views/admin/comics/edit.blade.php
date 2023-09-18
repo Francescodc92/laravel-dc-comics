@@ -20,7 +20,12 @@
         @method('PUT')
 
         <div class="mb-3">
-          <label for="title" class="form-label">Title</label>
+          <label for="title" class="form-label">
+            Title
+            <span class="text-danger">
+              *
+            </span>
+          </label>
           <input 
             type="text" 
             class="form-control @error('title') is-invalid @enderror"
@@ -57,7 +62,12 @@
         </div>
         <div class="row">
           <div class="mb-3 col-12 col-md-6">
-              <label for="price" class="form-label">Price</label>
+              <label for="price" class="form-label">
+                Price
+                <span class="text-danger">
+                  *
+                </span>
+              </label>
               <input 
                 type="number" 
                 min="0.01" 
@@ -78,7 +88,12 @@
           </div>
 
           <div class="mb-3 col-12 col-md-6">
-            <label for="series" class="form-label">Series</label>
+            <label for="series" class="form-label">
+              Series
+              <span class="text-danger">
+                *
+              </span>
+            </label>
             <input 
               type="text" 
               maxlength="100" 
@@ -99,7 +114,12 @@
 
         <div class="row">
           <div class="mb-3 col-12 col-md-6">
-            <label for="sale_date" class="form-label">Sale Date</label>
+            <label for="sale_date" class="form-label">
+              Sale Date
+              <span class="text-danger">
+                *
+              </span>
+            </label>
             <input 
               type="date" 
               class="form-control @error('sale_date') is-invalid @enderror" 
@@ -117,7 +137,12 @@
           </div>
 
           <div class="mb-3 col-12 col-md-6">
-            <label for="type" class="form-label">Type</label>
+            <label for="type" class="form-label">
+              Type
+              <span class="text-danger">
+                *
+              </span>
+            </label>
             <input 
               type="text" 
               maxlength="100" 
@@ -137,7 +162,12 @@
         </div>
 
         <div class="mb-3">
-          <label for="artists" class="form-label">lista artisti</label>
+          <label for="artists" class="form-label">
+            lista artisti
+            <span class="text-danger">
+              *
+            </span>
+          </label>
           <input 
             type="text" 
             maxlength="255" 
@@ -156,7 +186,12 @@
         </div>
 
         <div class="mb-3">
-          <label for="writers" class="form-label">Lista scrittori</label>
+          <label for="writers" class="form-label">
+            Lista scrittori
+            <span class="text-danger">
+              *
+            </span>
+          </label>
           <input 
             type="text" 
             maxlength="255" 
