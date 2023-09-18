@@ -53,82 +53,85 @@
                 </div>
             @enderror
           </div>
-
-          <div class="mb-3">
-              <label for="price" class="form-label">Price</label>
+          <div class="row">
+            <div class="mb-3 col-12 col-md-6">
+                <label for="price" class="form-label">Price</label>
+                <input 
+                  type="number" 
+                  min="0.01" 
+                  max="100" 
+                  step="0.01" 
+                  class="form-control @error('price') is-invalid @enderror" 
+                  id="price" 
+                  name="price" 
+                  value="{{ old('price') }}"
+                  placeholder="Enter value..." 
+                  required
+                >
+                @error('price')
+                  <div class="alert alert-danger my-2">
+                      {{ $message }}
+                  </div>
+                @enderror 
+            </div>
+  
+            <div class="mb-3 col-12 col-md-6">
+              <label for="series" class="form-label">Series</label>
               <input 
-                type="number" 
-                min="0.01" 
-                max="100" 
-                step="0.01" 
-                class="form-control @error('price') is-invalid @enderror" 
-                id="price" 
-                name="price" 
-                value="{{ old('price') }}"
+                type="text" 
+                maxlength="100" 
+                class="form-control @error('series') is-invalid @enderror" 
+                id="series" 
+                name="series"
+                value="{{ old('series') }}"
                 placeholder="Enter value..." 
                 required
               >
-              @error('price')
+              @error('series')
                 <div class="alert alert-danger my-2">
                     {{ $message }}
                 </div>
-              @enderror 
+              @enderror
+            </div>
           </div>
 
-          <div class="mb-3">
-            <label for="series" class="form-label">Series</label>
-            <input 
-              type="text" 
-              maxlength="100" 
-              class="form-control @error('series') is-invalid @enderror" 
-              id="series" 
-              name="series"
-              value="{{ old('series') }}"
-              placeholder="Enter value..." 
-              required
-            >
-            @error('series')
-              <div class="alert alert-danger my-2">
-                  {{ $message }}
-              </div>
-            @enderror
-          </div>
-
-          <div class="mb-3">
-            <label for="sale_date" class="form-label">Sale Date</label>
-            <input 
-              type="date" 
-              class="form-control @error('sale_date') is-invalid @enderror" 
-              id="sale_date" 
-              name="sale_date"
-              value="{{ old('sale_date') }}"
-              placeholder="Enter value..." 
-              required
-            >
-            @error('sale_date')
-              <div class="alert alert-danger my-2">
-                  {{ $message }}
-              </div>
-            @enderror
-          </div>
-
-          <div class="mb-3">
-            <label for="type" class="form-label">Type</label>
-            <input 
-              type="text" 
-              maxlength="100" 
-              class="form-control @error('type') is-invalid @enderror" 
-              id="type" 
-              name="type"
-              value="{{ old('type') }}"
-              placeholder="Enter value..." 
-              required
-            >
-            @error('type')
-              <div class="alert alert-danger my-2">
-                  {{ $message }}
-              </div>
-            @enderror
+          <div class="row">
+            <div class="mb-3 col-12 col-md-6">
+              <label for="sale_date" class="form-label">Sale Date</label>
+              <input 
+                type="date" 
+                class="form-control @error('sale_date') is-invalid @enderror" 
+                id="sale_date" 
+                name="sale_date"
+                value="{{ old('sale_date') }}"
+                placeholder="Enter value..." 
+                required
+              >
+              @error('sale_date')
+                <div class="alert alert-danger my-2">
+                    {{ $message }}
+                </div>
+              @enderror
+            </div>
+  
+            <div class="mb-3 col-12 col-md-6">
+              <label for="type" class="form-label">Type</label>
+              <input 
+                type="text" 
+                maxlength="100" 
+                class="form-control @error('type') is-invalid @enderror" 
+                id="type" 
+                name="type"
+                value="{{ old('type') }}"
+                placeholder="Enter value..." 
+                required
+              >
+              @error('type')
+                <div class="alert alert-danger my-2">
+                    {{ $message }}
+                </div>
+              @enderror
+            </div>
           </div>
 
           <div class="mb-3">
