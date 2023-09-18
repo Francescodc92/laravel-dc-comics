@@ -29,7 +29,7 @@
 
           <div class="mb-3">
               <label for="price" class="form-label">Price</label>
-              <input type="number" min="0.01" step="0.01" class="form-control" id="price" name="price" placeholder="Enter value..." required>
+              <input type="number" min="0.01" max="100" step="0.01" class="form-control" id="price" name="price" placeholder="Enter value..." required>
           </div>
 
           <div class="mb-3">

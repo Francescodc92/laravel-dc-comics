@@ -32,7 +32,18 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $formData = $request->all();
+        $formData = $request->validate([
+            'title'=> 'required|max:64',
+            'description'=> 'nullable',
+            'thumb'=> 'nullable|max:2048',
+            'price'=> 'required|decimal:0,2|min:0.01|max:100',
+            'series'=> 'required|max:100',
+            'sale_date' => 'required|date',
+            'type'=> 'required|max:100',
+            'artists' => 'required',
+            'writers' => 'required',
+        ]);
+
 
         $comic = Comic::create($formData);
         return redirect()->route('comics.show', ['comic' => $comic->id]);
@@ -41,9 +52,8 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
         return view('admin.comics.show', compact('comic'));
     }
 
